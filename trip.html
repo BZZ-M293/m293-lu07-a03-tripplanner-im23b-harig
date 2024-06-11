@@ -3,12 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <title>Reisebuchungs-Formular</title>
-
 </head>
 <body>
-
 <h1>Reisebuchungs-Formular</h1>
+<form>
+  <label>Reisebuchung:
+    <select name="Reisebuchung" size="1">
+      <option>Deutschland</option>
+      <option>Österreich</option>
+      <option>Italien</option>
+      <option>Frankreich</option>
+    </select>
+  </label>
+  <br><br>
+    <label>
+      <input type="radio" name="unterkunft" value="hotel"> Hotel
+      <input type="radio" name="unterkunft" value="ferienwohnung"> Ferienwohnung
+      <input type="radio" name="unterkunft" value="hostel"> Hostel
+    </label>
+  <br><br>
+    <label>
+      <input type="checkbox" name="dienstleistungen" value="reiseversicherung"> Reiseversicherung
+      <input type="checkbox" name="dienstleistungen" value="flughafentransfer"> Flughafentransfer
+      <input type="checkbox" name="dienstleistungen" value="zusätzliches_gepäck"> Zusätzliches Gepäck
+    </label>
+  <br><br>
+  <label>
+    Anfangszeitpunkt:
+    <input type="date" name="anfangszeitpunkt">
+  </label>
+  <br>
+  <label>
+    Endzeitpunkt:
+    <input type="date" name="endzeitpunkt">
+  </label>
+  <br>
+  <label>
+    Dauer der Reise (in Tagen, 1-21):
+    <input type="number" name="reisedauer" min="1" max="21">
+  </label>
+  <br>
+  <label>
+    Anzahl der reisenden Personen:
+    <input type="number" name="anzahl_personen" min="1">
+  </label>
+  <br><br>
+  <label>Weitere optionale Dienstleistungen:
+    <input type="checkbox" name="optionale_dienstleistungen" value="priority_check_in"> Priority-Check-In
+    <input type="checkbox" name="optionale_dienstleistungen" value="zusätzliches_handgepäck"> Zusätzliches Handgepäck
+    <input type="checkbox" name="optionale_dienstleistungen" value="mietwagen"> Mietwagen buchen
+  </label>
+  <br><br>
 
+  <label>Reiseziel:
+    <input list="reiseziele" name="reiseziel">
+    <datalist id="reiseziele">
+      <option value="New York">
+      <option value="London">
+      <option value="Tokyo">
+      <option value="Sydney">
+      <option value="Kapstadt">
+    </datalist>
+  </label>
+  <br><br>
 
+  <label>E-Mail-Adresse:
+    <input type="email" name="email" required>
+  </label>
+  <br><br>
+
+  <button type="reset">Reset</button>
+  <button type="submit">Absenden</button>
+</form>
 </body>
 </html>
